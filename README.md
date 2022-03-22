@@ -4,7 +4,7 @@
 
 Click: “Add to project”
 
-![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_image/add-source.png)
+![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/add-source.png)
 
 
 
