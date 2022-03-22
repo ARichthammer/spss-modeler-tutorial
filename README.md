@@ -4,4 +4,8 @@
 
 Click: “Add to project”
 
-Screen
+![ScreenShot](https://raw.github.com/{ARichthammer}/{spss-modeler-tutorial}/{main}/
+
+
+
+![ScreenShot](https://raw.github.com/{username}/{repository}/{branch}/{path}
