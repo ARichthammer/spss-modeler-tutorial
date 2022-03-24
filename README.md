@@ -8,7 +8,7 @@
 #### 1. Modeler Flow öffnen
 Klicke auf den blauen Button: “Add to project” (oben rechts) und dann „Modeler Flow“ auswählen
 
-![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/01 – Open Modeler Flow.png)
+![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/01-Open Modeler Flow.png)
 
 
 #### 2. Namen vergeben und auf „Create“ klicken
