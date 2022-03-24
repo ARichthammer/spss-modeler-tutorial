@@ -1,7 +1,4 @@
 
-![ScreenShot](https://raw.github.com/{username}/{repository}/{branch}/{path}
-
-
 #  SPSS Modeler Tutorial
 
 
@@ -14,6 +11,7 @@ Klicke auf den blauen Button: “Add to project” (oben rechts) und dann „Mod
 #### 2. Namen vergeben und auf „Create“ klicken
 
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/02.png)
+
 
 Die GUI von Modeler Flow öffnet sich.
 
