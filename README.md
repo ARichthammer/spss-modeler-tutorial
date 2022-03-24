@@ -8,7 +8,7 @@
 #### 1. Modeler Flow öffnen
 Klicke auf den blauen Button: “Add to project” (oben rechts) und dann „Modeler Flow“ auswählen
 
-![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/01-Open Modeler Flow.png)
+![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/01–Open Modeler Flow.png)
 
 
 #### 2. Namen vergeben und auf „Create“ klicken
@@ -46,6 +46,10 @@ Eine oder mehrere Variable auswählen und auf "Visualize Data" klicken. Die Char
 Es stehen verschiedene Charttypen zur Verfügung. Besonders interessant für die folgende Zeitreihe-Analyse ist der "Timeplot"
 
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/09 - Time Plot.png)
+
+Add  Chart definition
+
+ADF TEst
 
 
 #### 3. Daten explorieren
