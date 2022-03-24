@@ -39,13 +39,13 @@ Unter dem Reiter "Graphs" den "Charts" Knoten in den Canvas ziehen. Mit der Maus
 Rechte Maustaste auf den "Charts"-Knoten und auf "Open" klicken
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/07 - Launch Chart Builder.png)
 
-Es öffnet sich nach 
+Es öffnet sich die Visualisierungs-Engine.
+Eine oder mehrere Variable auswählen und auf "Visualize Data" klicken. Die Chartengine wählt automatisch eine passende Grafik aus.
+![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/08 - Visualisierung.png)
 
+Es stehen verschiedene Charttypen zur Verfügung. Besonders interessant für die folgende Zeitreihe-Analyse ist der "Timeplot"
 
-![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/06 - Knoten verbinden.png)
-
-
-![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/06 - Knoten verbinden.png)
+![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/09 - Time Plot.png)
 
 
 #### 3. Daten explorieren
