@@ -131,11 +131,47 @@ In unserem Fall sind das:
 
 
 
+Weiter unten im Reiter Build Options kann man die gewünschten Zeitreihenalgorithmen konfigurieren.
+Wir belassen es bei den Standard-Einstellungen, bei denen der sog. __Expert Modeler__ benutzt wird, der alle Zeitreihenverfahren (ARIMA sowie Verfahren des exponentiellen Glättens) durchrechnet und das am besten performende Model automatisiert auswählt.
+
+![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/17.png)
 
 
+Weiter unten im Reiter __Model Options__ nehmen wir die letzte Konfiguration vor. Wir definieren, wie lange das Modell in die Zukunft prognostizieren soll. Dafür setzen wir ein Häkchen beim Punkt _Extend records into the future_ und legen darunter die Anzahl der Stunden fest – in meinem Fall wähle ich drei Stunden.
+
+
+![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/18.png)
+
+Wir speichern unsere Einstellungen, indem wir unten den blauen __Save__-Button drücken.
+
+Jetzt führen wir das Zeitreihenmodell aus. Rechte Maustaste auf den Time Series Knoten und __Run__.
+
+Es erscheint ein fünfeckiges, brauner Modellknoten, den wir mit rechter Maustaste und __View Model__ öffnen können
+![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/19.png)
+
+Es öffnet sich die Modellübersicht
+
+![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/20.png)
 
 #### 5. Evaluation
+Der Modellübersicht können wir entnemen, dass in der vorliegenden Zeitreihe das ARIMA das beste Zeitreihenverfahren ist.
+Wenn man auf den blau markierten Hyperlink __sensorValue__ klickt, dann bekommt man noch viele weitere Modellgüteparameter
 
+Um die Zeitreihe und die Vorhersage des ARIMA Models zu visualsieren, ziehen wir unter dem Reiter __Graphs__ den __Time plot__-Outputknoten in den Kanvas und öffnen diesen
+
+Wir markieren den Punkt __Selected Time Series models__ und klicken auf den blauen __Add columns__-Button. Hier setzen wir ein Häkchen bei der $TS-Variable. Hierbei handelt es sich um die Variable mit den vorhergesagten Werten.
+
+![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/21.png)
+
+Danach speichern wir unsere Einstellungen (__Save__) und führen den Time plot-Knoten aus (rechte Maustaste & __Run__).
+
+Im Timeplot stehen die roten Punkte für die wirklichen historischen Datenpunkte (in meinem Fall 13). Die Linie beschreibt das ARIMA-Modell inklusive den drei vorhergesagten Werten. Der blaue Korridor visualisiert das Konfidenzintervall – also: wie sicher sich das Modell in Bezug auf seine Verhersage ist. Je breiter, desto unsicherer.
+
+![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/22.png)
+
+
+Zudem: Historya Knoten, Differenzieren
+regression und Verfahren zur Vorhersage von numerischen Variablen (z.B. XGBoost, Random Forrest etc.)
 
 
 Weiterführende Informationen:
