@@ -127,9 +127,10 @@ In unserem Fall sind das:
 - Time Interval: __"Hours per day"__
 
 
-
-
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/16.png)
+
+
+
 
 
 
