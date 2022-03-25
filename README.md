@@ -41,11 +41,11 @@ Mit der rechten Maustaste auf den runden Datenasset-Knoten und dann auf __Previe
 
 Unter dem Reiter __Graphs__ den __Charts__ Knoten in den Canvas ziehen. Mit der Maustaste über den __Data Asset__-Quellknoten gleiten, bis ein blaues Dreieck erscheint. Das Dreieck anklicken und mittels Drag and Drop zum __Charts__-Knoten ziehen.
 
-![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/06-1.png)
+![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/6-1.png)
 
 Es entsteht ein Pfeil der beide Knoten miteinander verbindet und die Richtung des Datenflusses visualisiert.
 
-![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/06-2.png)
+![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/6-2.png)
 
 
 
