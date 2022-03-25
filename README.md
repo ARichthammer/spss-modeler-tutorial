@@ -39,10 +39,14 @@ Unter dem Reiter __Data asset__ den gewünschten Datensatz auswählen und auf de
 Mit der rechten Maustaste auf den runden Datenasset-Knoten und dann auf __Preview__ klicken. Es öffnet sich eine Vorschau auf die Daten.
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/05.png)
 
-Unter dem Reiter __Graphs__ den __Charts__ Knoten in den Canvas ziehen. Mit der Maustaste über den __Data Asset__-Quellknoten gleiten, bis ein blaues Dreieck erscheint. Das Dreieck anklicken und mittels Drag and Drop zum __Charts__-Knoten ziehen. Es entsteht ein Pfeil der beide Knoten miteinander verbindet und die Richtung des Datenflusses visualisiert.
+Unter dem Reiter __Graphs__ den __Charts__ Knoten in den Canvas ziehen. Mit der Maustaste über den __Data Asset__-Quellknoten gleiten, bis ein blaues Dreieck erscheint. Das Dreieck anklicken und mittels Drag and Drop zum __Charts__-Knoten ziehen.
 
+![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/06-1.png)
 
-![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/06.png)
+Es entsteht ein Pfeil der beide Knoten miteinander verbindet und die Richtung des Datenflusses visualisiert.
+
+![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/06-2.png)
+
 
 
 Doppelklick auf den __Charts__-Knoten. Rechts öffnet sich ein Fenster und hier auf den blauen Button __Launch Chart Builder__ klicken
