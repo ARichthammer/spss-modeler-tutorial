@@ -159,7 +159,7 @@ Wenn man auf den blau markierten Hyperlink __sensorValue__ klickt, dann bekommt 
 
 Um die Zeitreihe und die Vorhersage des ARIMA Models zu visualsieren, ziehen wir unter dem Reiter __Graphs__ den __Time plot__-Outputknoten in den Kanvas und öffnen diesen
 
-Wir markieren den Punkt __Selected Time Series models__ und klicken auf den blauen __Add columns__-Button. Hier setzen wir ein Häkchen bei der $TS-Variable. Hierbei handelt es sich um die Variable mit den vorhergesagten Werten.
+Wir markieren den Punkt __Selected Time Series models__ und klicken auf den blauen __Add columns__-Button. Dann setzen wir ein Häkchen bei der $TS-Variable. Hierbei handelt es sich um die Variable mit den vorhergesagten Werten.
 
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/21.png)
 
@@ -167,10 +167,12 @@ Danach speichern wir unsere Einstellungen (__Save__) und führen den Time plot-K
 
 Im Timeplot stehen die roten Punkte für die wirklichen historischen Datenpunkte (in meinem Fall 13). Die Linie beschreibt das ARIMA-Modell inklusive den drei vorhergesagten Werten. Der blaue Korridor visualisiert das Konfidenzintervall – also: wie sicher sich das Modell in Bezug auf seine Verhersage ist. Je breiter, desto unsicherer.
 
+
+
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/22.png)
 
 
-Zudem: Historya Knoten, Differenzieren
+Zudem: History Knoten, Differenzieren
 regression und Verfahren zur Vorhersage von numerischen Variablen (z.B. XGBoost, Random Forrest etc.)
 
 
