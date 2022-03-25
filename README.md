@@ -2,6 +2,9 @@
 #  SPSS Modeler Tutorial
 
 
+Ziel des Tutorials => Forecasting Model
+
+
 ### 1. Modeler Flow öffnen
 Klicke auf den blauen Button: “Add to project” (oben rechts) und dann „Modeler Flow“ auswählen
 
@@ -62,10 +65,34 @@ _Data Audit Knoten_ (unter Reiter: Outputs): statistische Kennzahlen, Verteilung
 
 #### 4. Daten aubereiten
 
+#####4.1 Selektion ID
+
+Zunächst selektieren wir die Datensätze für das stündliche Verkehrsaufkommen (ID = 5054  bzw. 5055).
+Hierfür ziehen wir einen _Select_-Knoten aus dem Reiter _Record Operations_ in die Modeler-Oberfläche und verbinden den Knoten mit dem Quellknoten.
+
+![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/10.png)
+
+Danach Doppelklick auf den _Select_-Knoten öffnet sich rechts das Einstellungsfenster. Im grau markierten Eingabebereich tippen wir folgende Formel ein: ___id = 5054__: und drücken auf den _Save_-Button.
+
+![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/11.png)
+
+Mit einer Vorschau auf den Selcet-Knoten (rechte Maustaste => Preview) kann man überprüfen, ob die Selektion funktioniert hat.
+
+Komplexere Datenselektierungsoperationen können mit dem sog. Expression Builder ausfegührt werden. Hierzu klickt man auf das Taschenrechnersymbol (blau eingerahmt) im geöffneten Select-Knoten.
+
+#####4.1 Selektion Roadstation-ID
+
+Im nächsten Schritt selektieren wir eine Roadstation-ID, für die wir im Anschluss ein Forecasting-Model des Verkehrsaufkommens bauen werden.
+Hierzu ziehen wir einen weiteren Select-Knoten in den Modeler Stream und verbinden diesen mit dem vorher benutzen ID-Select Knoten. dann: Doppelklick auf den neuen Selectknoten und Eingabe folgender Formel: ___roadStationId = 23140___. Plus Save. 
+
+Um die Operation zu überprüfen, ziehen wir dieses Mal einen _Table_-Knoten – unter dem Reiter _Outputs_ – in die Oberfläche und führen die Tabelle aus (rechte Maustaste und _Run_). Im Output-Fenster, das rechts aufpoppt, klickt man auf die Tabelle an, wodurch sich diese öffnet.
+
+![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/12.png)
 
 
+id = 5054
 
-
+roadStationId = 23140
 #### 5. Modellieren
 
 
