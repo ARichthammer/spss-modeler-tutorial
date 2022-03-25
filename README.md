@@ -19,15 +19,16 @@ Die GUI von Modeler Flow öffnet sich.
   
 
 ### 3. Datenquelle anbinden
-Unter dem Reiter „Import“ findet sich der Knoten „Data Asset“. 
+Unter dem Reiter „Import“ findet sich der Knoten „Data Asset“.
+Den Knoten „Data Asset“ mit Drag and Drop in den leeren Canvas ziehen und dann mit einem Doppelklick öffnen.
 
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/03.png)
 
-Den Knoten „Data Asset“ mit Drag and Drop in den leeren Canvas ziehen und dann mit einem Doppelklick öffnen. Es öffnet sich der Dateneditor.
-
+ Es öffnet sich der Dateneditor.
+Unter dem Reiter "Data asset" den gewünschten Datensatz auswählen und auf den blauen "Select"-Button drücken.
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/04.png)
 
-Unter dem Reiter "Data asset" den gewünschten Datensatz auswählen und auf den blauen "Select"-Button drücken.
+
 
  
   
@@ -57,6 +58,22 @@ Add  Chart definition
 ADF TEst
 
 
-#### 3. Daten explorieren
+#### 4. Daten explorieren
 
 
+
+
+
+#### 5. Modellieren
+
+
+
+
+
+#### 5. Evaluation
+
+
+
+Weiterführende Informationen:
+Modeler Flow Knowledge Center: https://dataplatform.cloud.ibm.com/docs/content/wsd/spss-modeler.html
+Dort findet er eine Eräuterung der einzelnen Modeler Knoten und noch weiterführende Tutorials
