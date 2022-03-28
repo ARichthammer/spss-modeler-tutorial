@@ -78,8 +78,8 @@ Mit dem Button __Return to flow__ (oben rechts) kommt man wieder zurück zum Mod
 
 EXKURS: Weitere Möglichkeit der Datenexploration:
 1. __Data Audit Knoten__ (unter Reiter: __Outputs__): liefert statistische Kennzahlen (Mean, Median, Varianz, Schiefe), fehlende Werte, Ausreißer.
-(Vorgehen: Knoten die in Oberfläche ziehen, mit Quellknoten verbinden, rechte Maustaste & __Run__, rechts unter Outputs & Models den Data Audit Button anklicken)
-2. __Entscheidungsbäume__: Hierbei handelt es sich um komplexere Verfahren, die es jedoch ermöglichen unbekannte Muster und Struktueren in den Daten zu explorieren. Beipiele: __CHAID__ oder __C$RT__ (unter dem Reiter __Modeling__)
+(Vorgehen: Knoten in die Oberfläche ziehen, mit Quellknoten verbinden, rechte Maustaste & __Run__, rechts unter Outputs & Models den Data Audit Button anklicken)
+2. __Entscheidungsbäume__: Hierbei handelt es sich um komplexere Verfahren, die es jedoch ermöglichen unbekannte Muster und Strukturen in den Daten zu explorieren. Beipiele: __CHAID__ oder __C$RT__ (unter dem Reiter __Modeling__)
 
 
 
@@ -92,7 +92,7 @@ Hierfür ziehen wir einen __Select__-Knoten aus dem Reiter __Record Operations__
 
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/10.png)
 
-Danach Doppelklick auf den Select-Knoten. Es öffnet sich rechts das Settings-Fenster. Im grau markierten Eingabebereich tippen wir folgende Formel ein: ___id = 5054___: und drücken auf den __Save__-Button.
+Danach Doppelklick auf den Select-Knoten. Es öffnet sich rechts das Fenster mit den Knoteneinstellungen. Im grau markierten Eingabebereich tippen wir folgende Formel ein: ___id = 5054___: und drücken auf den __Save__-Button.
 
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/11.png)
 
@@ -114,7 +114,8 @@ Damit haben wir einen aufbereiteten Datensatz für die Modellierung einer Zeitre
 
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/13.png)
 
-Mehr Infos zur Daenaufbereitung unter folgendem Link: 
+Mehr Infos zur Datenaufbereitung und den einzelnen Operationen findet man unter folgenden Links: 
+
 Record Operations: https://dataplatform.cloud.ibm.com/docs/content/wsd/nodes/_nodes_record_operations.html
 
 Field Operations: https://dataplatform.cloud.ibm.com/docs/content/wsd/nodes/_nodes_field_operations.html
@@ -122,7 +123,7 @@ Field Operations: https://dataplatform.cloud.ibm.com/docs/content/wsd/nodes/_nod
 
 ### 4. Modellierung
 
-Vor der eigentlichen Modelierung ziehen wir noch einen sog __Type__-Knoten aus dem Reiter __Field Operations__ in den Canvas und öffnen diesen mit einem Doppelklick. Im Type-Knoten klicken wir auf den blauen Button __Read values__. Damit wird der Modeler-Stream "instanziert". Das heißt, dass die Datenwerte eingelesen und das Skalenniveau und der Datentyp bestimmt werden. Danach drücken wir den blauen __Save__-Button.
+Vor der eigentlichen Modelierung ziehen wir einen __Type__-Knoten aus dem Reiter __Field Operations__ in den Canvas und öffnen diesen mit einem Doppelklick. Im Type-Knoten klicken wir auf den blauen Button __Read values__. Damit wird der Modeler-Stream "instanziert". Das heißt: alle Datenwerte werden eingelesen und das Skalenniveau und der Datentyp für die einzelnen Variablen werden  automatisch bestimmt. Danach drücken wir den blauen __Save__-Button.
 
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/14.png)
 
@@ -131,13 +132,13 @@ _P.S: 80% aller Fehlermeldungen im Modeler lassen sich lösen, indem man einen T
 
 Jetzt können wir mit der __Modellierung__ endlich beginnen!
 
-Hierzu ziehen wir hinter dem Type-Knoten einen __Time Series__-Knoten im Reiter __Modeling__ in die Oberfläche und öffnen diesen mit einem Doppelklick.
-Im Knoten setzen wir ein Häcken bei __Use custom field roles__, damit wir selbst die relevanten Zielvariablen auswählen können. Dann klicken wir auf den blauen Button __Add columns +__  und setzen ein Häcken bei der Variable ___sensorValue___, welche inhaltlich das stündliche Verkehrsaufkommen beschreibt. Unsere Auswahl bestätigen wir unten mit __Ok__. Damit haben wir unsere Zielvariable bestimmt. Unter __Candidate Inputs__ könnte man noch externe Faktoren in die Zeitreihenanalyse einfließe lassen.
+Hierzu ziehen wir hinter dem Type-Knoten einen __Time Series__-Knoten aus dem Reiter __Modeling__ in die Oberfläche und öffnen diesen mit einem Doppelklick.
+Im Knoten setzen wir ein Häcken bei __Use custom field roles__, damit wir manuell die relevanten Zielvariablen auswählen können. Dann klicken wir auf den blauen Button __Add columns +__  und setzen ein Häcken bei der Variable ___sensorValue___, welche inhaltlich das stündliche Verkehrsaufkommen beschreibt. Unsere Auswahl bestätigen wir unten mit __Ok__. Damit haben wir unsere Zielvariable bestimmt. Unter __Candidate Inputs__ könnte man noch externe Faktoren in die Zeitreihenanalyse einfließen lassen.
 
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/15.png)
 
 
-Danach scrollen wir in den Einstellungen weiter nach unten zum Reiter __Observations and Time Intervall__, wo wir die für die Analyse relevante Zeitvariable und das Zeitintervall definieren müssen. 
+Danach scrollen wir in den Einstellungen weiter nach unten zum Reiter __Observations and Time Intervall__, wo wir die für die Analyse relevante Zeitvariable und das Zeitintervall definieren. 
 In unserem Fall sind das:
 - Time/Date Field: Variable __"timestamp"__
 - Time Interval: __"Hours per day"__
@@ -148,17 +149,19 @@ In unserem Fall sind das:
 
 
 Weiter unten im Reiter Build Options kann man die gewünschten Zeitreihenalgorithmen konfigurieren.
-Wir belassen es bei den Standard-Einstellungen, bei denen der sog. __Expert Modeler__ benutzt wird, der alle Zeitreihenverfahren (ARIMA sowie Verfahren des exponentiellen Glättens) durchrechnet und das am besten performende Model automatisiert auswählt.
+Wir belassen es bei den Standard-Einstellungen, bei denen der sog. __Expert Modeler__ benutzt wird, der alle Zeitreihenverfahren (ARIMA sowie Verfahren des exponentiellen Glättens) automatisch durchrechnet und das am besten performende Model bestimmt.
 
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/17.png)
 
 
-Weiter unten im Reiter __Model Options__ nehmen wir die letzte Konfiguration vor. Wir definieren, wie lange das Modell in die Zukunft prognostizieren soll. Dafür setzen wir ein Häkchen beim Punkt _Extend records into the future_ und legen darunter die Anzahl der Stunden fest – in meinem Fall wähle ich drei Stunden.
+Weiter unten im Reiter __Model Options__ nehmen wir die letzte Konfiguration vor.
+Wir definieren, wie lange das Modell in die Zukunft prognostizieren soll. Dafür setzen wir ein Häkchen beim Punkt _Extend records into the future_ und legen darunter die Anzahl der prognostizierten Stunden fest – im vorliegenden Szenario wähle ich drei Stunden.
 
 
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/18.png)
 
 Wir speichern unsere Einstellungen, indem wir unten den blauen __Save__-Button drücken.
+
 
 Jetzt führen wir das Zeitreihenmodell aus. Rechte Maustaste auf den Time Series Knoten und __Run__.
 
@@ -170,26 +173,31 @@ Es öffnet sich die Modellübersicht
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/20.png)
 
 #### 5. Evaluation
-Der Modellübersicht können wir entnemen, dass in der vorliegenden Zeitreihe das ARIMA das beste Zeitreihenverfahren ist.
-Wenn man auf den blau markierten Hyperlink __sensorValue__ klickt, dann bekommt man noch viele weitere Modellgüteparameter
+Der Modellübersicht können wir entnehmen, dass in der vorliegenden Zeitreihe das ARIMA-Modell das beste Zeitreihenverfahren ist.
+Wenn man auf den blau markierten Hyperlink __sensorValue__ klickt, dann bekommt man noch viele weitere Modellgüteparameter angezeigt.
 
-Um die Zeitreihe und die Vorhersage des ARIMA Models zu visualsieren, ziehen wir unter dem Reiter __Graphs__ den __Time plot__-Outputknoten in den Kanvas und öffnen diesen
+Um die Zeitreihe und die Vorhersage des ARIMA Models zu visualsieren, ziehen wir unter dem Reiter __Graphs__ den __Time plot__-Outputknoten in den Canvas und öffnen diesen.
 
-Wir markieren den Punkt __Selected Time Series models__ und klicken auf den blauen __Add columns__-Button. Dann setzen wir ein Häkchen bei der $TS-Variable. Hierbei handelt es sich um die Variable mit den vorhergesagten Werten.
+Wir markieren den Punkt __Selected Time Series models__ und klicken auf den blauen __Add columns__-Button. Dann setzen wir ein Häkchen bei der $TS-Variable. Hierbei handelt es sich um die Variable, die die vorhergesagten Werten beinhaltet.
 
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/21.png)
 
 Danach speichern wir unsere Einstellungen (__Save__) und führen den Time plot-Knoten aus (rechte Maustaste & __Run__).
 
-Im Timeplot stehen die roten Punkte für die wirklichen historischen Datenpunkte (in meinem Fall 13). Die Linie beschreibt das ARIMA-Modell inklusive den drei vorhergesagten Werten. Der blaue Korridor visualisiert das Konfidenzintervall – also: wie sicher sich das Modell in Bezug auf seine Verhersage ist. Je breiter, desto unsicherer.
-
+Im Timeplot stehen die roten Punkte für die historischen Datenpunkte (im vorliegenden Fall sind es 13). Die Linie beschreibt das ARIMA-Modell inklusive den drei vorhergesagten Werten. Der blaue Korridor visualisiert das Konfidenzintervall – also: wie sicher ist sich das Modell in Bezug auf seine Verhersage. Je breiter, desto unsicherer.
 
 
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/22.png)
 
 
-Zudem: History Knoten, Differenzieren
-regression und Verfahren zur Vorhersage von numerischen Variablen (z.B. XGBoost, Random Forrest etc.)
+__________
+
+
+Hier endet das Tutorial, das nur einen kleinen Einblick in die Funktionalitäten des Modelers gibt.
+
+Neben der klassischen Zeitreihen-Analyse bietet der Modeler auch noch eine Vielzahl an Machine Learning Algorithmen (z.B. XG Boost, Random Forest etc.), mit denen man auch eine Vorhersage des zukünftigen Verkehrsaufkommen bewerksetelligen kann.
+
+__________
 
 
 Weiterführende Informationen:
