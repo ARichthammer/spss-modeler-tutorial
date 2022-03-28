@@ -4,13 +4,13 @@
 
 In diesem Tutorial werden TMS Daten (Traffic Measurement System Data) aus Finnland exploriert, aufbereitet und analysiert. Mittels einer Zeitreihenanalyse wird zudem eine Progose des Verkehrsaufkommen an einer ausgewählten RoadStation vorgenommen. Eine nähere Beschreibung der Daten findet sich unter: https://www.digitraffic.fi/en/road-traffic/lam/
 
-Ziel des Tutorials: Erste Schritte und Vertrautwerden mit Modeler Flows innerhalb von Watson Studio
+Ziel des Tutorials: Erste Schritte und Vertrautwerden mit Modeler Flows innerhalb von Watson Studio.
 
 
 ___________
 
 
-___Ausgangssituation___: In Watson Studio wurde bereits ein Analyse-Projekt erstellt und man befindet sich in eben diesem Projekt.
+___Ausgangssituation___: In Watson Studio wurde bereits ein Analyse-Projekt erstellt und man befindet sich in diesem Projekt.
 
 ___________
 
@@ -20,6 +20,7 @@ Klicke auf den blauen Button: __Add to project__ (oben rechts) und wähle dann _
 
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/01.png)
 
+_________
 
 ### 2. Vergebe einen Namen für die Analyse und klicke auf __Create__
 
@@ -28,7 +29,7 @@ Klicke auf den blauen Button: __Add to project__ (oben rechts) und wähle dann _
 
 Die GUI von Modeler Flow öffnet sich.
 
- 
+ _________
   
 
 ### 3. Datenquelle anbinden
@@ -42,7 +43,7 @@ Unter dem Reiter __Data asset__ den gewünschten Datensatz auswählen und auf de
 
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/04.png)
 
-
+_________
 
 
 ### 3. Daten explorieren
@@ -71,23 +72,23 @@ Besonders interessant für die später folgende Zeitreihe-Analyse ist der __Time
 
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/09.png)
 
-Neben einer Zeitreihen-Zerlegung (Decomposition) werden im __Timeplot__-Chart auch noch wichtige statistische Tests angezeigt – wie zum Beispiel der ADF-Test zum Test der Stationärität einer Zeitreihe und ACF/ PACF-Plots für die Autokorrelation der Lag-Variablen.
+Neben einer Zeitreihen-Zerlegung (Decomposition) werden im __Timeplot__-Chart auch noch wichtige statistische Tests angezeigt – wie zum Beispiel der _ADF-Test_ zum Test der Stationärität einer Zeitreihe und _ACF/ PACF-Plots_ für die Autokorrelation der Lag-Variablen.
 _P.S: Im Screenshot sind die Sensorwerte für alle IDs dargestellt, was inhaltlich wenig Sinn macht. Die Grafik dient nur zur Veranschaulichung. Für eine sinnvolle Visualisierung müsste man zuerst auf einzelne IDs selektieren (siehe 4.1)_.
 
 Mit dem Button __Return to flow__ (oben rechts) kommt man wieder zurück zum Modeler Flow.
 
 EXKURS: Weitere Möglichkeit der Datenexploration:
 1. __Data Audit Knoten__ (unter Reiter: __Outputs__): liefert statistische Kennzahlen (Mean, Median, Varianz, Schiefe), fehlende Werte, Ausreißer.
-(Vorgehen: Knoten in die Oberfläche ziehen, mit Quellknoten verbinden, rechte Maustaste & __Run__, rechts unter Outputs & Models den Data Audit Button anklicken)
-2. __Entscheidungsbäume__: Hierbei handelt es sich um komplexere Verfahren, die es jedoch ermöglichen unbekannte Muster und Strukturen in den Daten zu explorieren. Beipiele: __CHAID__ oder __C$RT__ (unter dem Reiter __Modeling__)
+(Vorgehen: Knoten in die Oberfläche ziehen, mit Quellknoten verbinden, rechte Maustaste & __Run__, rechts unter _Outputs & Models_ den Data Audit Button anklicken)
+2. __Entscheidungsbäume__: Hierbei handelt es sich um komplexere Verfahren, die es jedoch ermöglichen unbekannte Muster und Strukturen in den Daten zu explorieren. Beipiele: __CHAID__ oder __C&RT__ (unter dem Reiter __Modeling__)
 
-
+______________
 
 ### 4. Daten aubereiten
 
 #### 4.1 Selektion ID
 
-Zunächst selektieren wir die Datensätze für das stündliche Verkehrsaufkommen (ID 5054 oder alternativ ID 5055 oder beide).
+Zunächst selektieren wir die Datensätze für das stündliche Verkehrsaufkommen (ID 5054).
 Hierfür ziehen wir einen __Select__-Knoten aus dem Reiter __Record Operations__ in die Modeler-Oberfläche und verbinden den Knoten mit dem Quellknoten.
 
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/10.png)
@@ -98,7 +99,7 @@ Danach Doppelklick auf den Select-Knoten. Es öffnet sich rechts das Fenster mit
 
 Mit einer Vorschau auf den Select-Knoten (rechte Maustaste => Preview) kann man überprüfen, ob die Selektion funktioniert hat.
 
-Komplexere Datenselektierungsoperationen können mit dem sog. _Expression Builder_ ausfgeführt werden. Hierzu klickt man auf das Taschenrechnersymbol (blau eingerahmt) im Select-Settings-Knoten.
+Komplexere Datenselektierungsoperationen können mit dem sog. _Expression Builder_ ausgeführt werden. Hierzu klickt man auf das Taschenrechnersymbol im Einstellungsknoten.
 
 
 #### 4.1 Selektion Roadstation-ID
@@ -120,6 +121,7 @@ Record Operations: https://dataplatform.cloud.ibm.com/docs/content/wsd/nodes/_no
 
 Field Operations: https://dataplatform.cloud.ibm.com/docs/content/wsd/nodes/_nodes_field_operations.html
 
+____________
 
 ### 4. Modellierung
 
@@ -138,7 +140,7 @@ Im Knoten setzen wir ein Häcken bei __Use custom field roles__, damit wir manue
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/15.png)
 
 
-Danach scrollen wir in den Einstellungen weiter nach unten zum Reiter __Observations and Time Intervall__, wo wir die für die Analyse relevante Zeitvariable und das Zeitintervall definieren. 
+Danach scrollen wir in den Einstellungen weiter nach unten zum Reiter __Observations and Time Intervall__, in deo wir die für die Analyse relevante Zeitvariable und das Zeitintervall definieren. 
 In unserem Fall sind das:
 - Time/Date Field: Variable __"timestamp"__
 - Time Interval: __"Hours per day"__
@@ -165,10 +167,10 @@ Wir speichern unsere Einstellungen, indem wir unten den blauen __Save__-Button d
 
 Jetzt führen wir das Zeitreihenmodell aus. Rechte Maustaste auf den Time Series Knoten und __Run__.
 
-Es erscheint ein fünfeckiges, brauner Modellknoten, den wir mit rechter Maustaste und __View Model__ öffnen können
+Es erscheint ein fünfeckiges, brauner Modellknoten, den wir mit rechter Maustaste und __View Model__ öffnen können.
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/19.png)
 
-Es öffnet sich die Modellübersicht
+Es öffnet sich die Modellübersicht:
 
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/20.png)
 
@@ -178,28 +180,30 @@ Wenn man auf den blau markierten Hyperlink __sensorValue__ klickt, dann bekommt 
 
 Um die Zeitreihe und die Vorhersage des ARIMA Models zu visualsieren, ziehen wir unter dem Reiter __Graphs__ den __Time plot__-Outputknoten in den Canvas und öffnen diesen.
 
-Wir markieren den Punkt __Selected Time Series models__ und klicken auf den blauen __Add columns__-Button. Dann setzen wir ein Häkchen bei der $TS-Variable. Hierbei handelt es sich um die Variable, die die vorhergesagten Werten beinhaltet.
+Wir markieren den Punkt __Selected Time Series models__ und klicken auf den blauen __Add columns__-Button. Dann setzen wir ein Häkchen bei der $TS-Variable. Hierbei handelt es sich um die Variable, welche die Vorhersagewerte des ARIMA Models beinhaltet.
 
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/21.png)
 
 Danach speichern wir unsere Einstellungen (__Save__) und führen den Time plot-Knoten aus (rechte Maustaste & __Run__).
 
-Im Timeplot stehen die roten Punkte für die historischen Datenpunkte (im vorliegenden Fall sind es 13). Die Linie beschreibt das ARIMA-Modell inklusive den drei vorhergesagten Werten. Der blaue Korridor visualisiert das Konfidenzintervall – also: wie sicher ist sich das Modell in Bezug auf seine Verhersage. Je breiter, desto unsicherer.
+Im Timeplot stehen die roten Punkte für die historischen Datenpunkte. Die Linie beschreibt das ARIMA-Modell inklusive den drei vorhergesagten Werten. Der blaue Korridor visualisiert das Konfidenzintervall – also: wie sicher ist sich das Modell in Bezug auf seine Verhersage. Je breiter, desto unsicherer.
 
 
 ![ScreenShot](https://raw.github.com/ARichthammer/spss-modeler-tutorial/main/readme_images/22.png)
 
 
+Die  Vorhersagewerte können mit einem __Table__-Knoten angeschaut und ggf. in eine Textdatei oder eine Datenbank exportiert werden (Reiter: Export).
+
 __________
 
 
-Hier endet das Tutorial, das nur einen kleinen Einblick in die Funktionalitäten des Modelers gibt.
+Hier endet unser Tutorial, das nur einen kleinen Einblick in die Funktionalitäten des Modelers geben konnte.
 
-Neben der klassischen Zeitreihen-Analyse bietet der Modeler auch noch eine Vielzahl an Machine Learning Algorithmen (z.B. XG Boost, Random Forest etc.), mit denen man auch eine Vorhersage des zukünftigen Verkehrsaufkommen bewerksetelligen kann.
+Neben der klassischen Zeitreihen-Analyse bietet der Modeler auch noch eine Vielzahl an Machine Learning Algorithmen (z.B. XGBoost, Random Forest etc.), mit denen man auch eine Vorhersage des zukünftigen Verkehrsaufkommen bewerkstelligen könnte.
 
 __________
 
 
 Weiterführende Informationen:
 Modeler Flow Knowledge Center: https://dataplatform.cloud.ibm.com/docs/content/wsd/spss-modeler.html
-Dort findet er eine Eräuterung der einzelnen Modeler Knoten und noch weiterführende Tutorials
+Neben einer Eräuterung einzelner Modeler-Knoten findet man hier noch zahlreiche, weitere Tutorials.
