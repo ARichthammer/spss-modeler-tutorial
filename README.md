@@ -1,8 +1,18 @@
 
-#  SPSS Modeler Tutorial
+#  Modeler Flow Tutorial
 
 
-Ziel des Tutorials => Forecasting Model
+In diesem Tutorial werden TMS Daten (Traffic Measurement System Data) aus Finnland exploriert, aufbereitet und analysiert. Mittels einer Zeitreihenanalyse wird zudem eine Progose des Verkehrsaufkommen an einer ausgewählten RoadStation vorgenommen. Eine nähere Beschreibung der Daten findet sich unter: https://www.digitraffic.fi/en/road-traffic/lam/
+
+Ziel des Tutorials: Erste Schritte und Vertrautwerden mit Modeler Flows innerhalb von Watson Studio
+
+
+___________
+
+
+___Ausgangssituation___: In Watson Studio wurde bereits ein Analyse-Projekt erstellt und man befindet sich in eben diesem Projekt.
+
+___________
 
 
 ### 1. Modeler Flow öffnen
